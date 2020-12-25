@@ -1,24 +1,63 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# テーブル設計
+## users テーブル
+| Column           | Type       | Options     |
+| ---------------- | ------     | ----------- |
+| nickname         | string     | null: false |
+| password         | string     | null: false |
+| email            | string     | null: false unique: true, index:true |
+| profile          | text       | null: false |
+### Association
+- has_many :breeds
 
-Things you may want to cover:
+## breeds テーブル
+| Column                       |  Type        |   Options   |
+| ---------------------------- | -----------  | ----------- |
+| title                        | string       | null: false |
+| category_id                  | integer      | null: false |
+| type_name                    | string       | null: false |
+| date                         | date         | null: false |
+| result                       | string       |             |
+| text                         | text         |             |
+| user_id                      | reference    | foreign_key: true |
+### Association 
+- belongs_to :users
+- has_one:informations
 
-* Ruby version
+## informations テーブル
+| Column             | Type       | Options     |
+| ------------------ | ---------- | ------------|
+| breeding_name      | string     | null: false |
+| locality           | string     | null: false |
+| generation_id      | integer    | null: false |
+| food_id            | integer    | null: false |
+| memo               | text       |             |
+| breeds_id          | reference  | foreign_key: true |
+### Association
+- belongs_to :breeds
+- has_many :more-informations
 
-* System dependencies
+## more-informations テーブル
+| Column             | Type       | Options     |
+| ------------------ | ---------- | ------------|
+| size               | string     |             |
+| sex_id             | integer    |             |
+| birth_day          | date       |             |
+| memo               | text       |             |
+| informations_id    | reference  | foreign_key: true |
+### Association
+- belongs_to :informations
+- has_many :detail-informations
 
-* Configuration
+## detail-informations テーブル
+| Column               | Type       | Options     |
+| -------------------- | ---------- | ------------| 
+| exchange_date        | date       | null: false |
+| capacity             | string     | null: false |
+| weight               | string     |             |
+| more-informatinos_id | reference  | foreign_key: true |
+### Association
+- belongs_to :more-informations
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 画像をアップロードする際はActive Storage Gemを用いる。
