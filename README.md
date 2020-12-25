@@ -55,7 +55,7 @@
 | -------------------- | ---------- | ------------| 
 | exchange_date        | date       | null: false |
 | capacity             | string     | null: false |
-| weight               | string     |             |
+| weight               | integer    |             |
 | more-informatinos_id | reference  | foreign_key: true |
 ### Association
 - belongs_to :more-informations
