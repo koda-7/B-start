@@ -6,6 +6,11 @@ class Breed < ApplicationRecord
     validates :date
   end
 
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category
+
+  validates :category_id, numericality: { other_than: 1 }
+
   belongs_to :uesrs
   has_one_attached :informations
   has_one_attached :image
