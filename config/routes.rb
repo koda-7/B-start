@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
+  root to:"breeds#index"
   devise_for :users
   
-  root to:"breeds#index"
 end
