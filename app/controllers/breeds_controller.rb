@@ -11,13 +11,13 @@ class BreedsController < ApplicationController
     if @breed.save
       redirect_to root_path
     else
-      render.new
+      render :new
     end
   end
 
   private
 
   def breed_params
-    prams.require(:breed).permit(:title, :category_id, :type_name, :data, :result, :text, :image).maerge(uesr_id: current_user.id)
+    params.require(:breed).permit(:title, :category_id, :type_name, :date, :result, :note, :image).merge(user_id: current_user.id)
   end
 end

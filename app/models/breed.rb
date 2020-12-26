@@ -1,4 +1,8 @@
 class Breed < ApplicationRecord
+  belongs_to :uesrs
+  has_one_attached :informations
+  # has_one_attached :image
+
   with_options presence: true do
     validates :title
     validates :category_id
@@ -11,7 +15,4 @@ class Breed < ApplicationRecord
 
   validates :category_id, numericality: { other_than: 1 }
 
-  belongs_to :uesrs
-  has_one_attached :informations
-  has_one_attached :image
 end
