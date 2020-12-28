@@ -1,6 +1,6 @@
 <%= form_with(model: @breed , local: true) do |f|%>
   <div>
-    投稿画像
+  投稿画像
   </div>
   <%= f.file_field :image %>
 
@@ -17,22 +17,22 @@
   <div>
   種類名
   </div>
-  <%= f.text_field :type_name , placeholder:"例）オオクワガタ"%>
+  <%= f.text_field :type_name, placeholder:"例）オオクワガタ"%>
 
   <div>
   セット日
   </div>
-  <%= f.text_field :date , placeholder:"例）2021-1-1"%>
+  <%= f.text_field :date, placeholder:"例）2021-1-1"%>
 
   <div>
-  結果(編集可)
+  結果
   </div>
-  <%= f.text_area :result , placeholder:"初投稿時は割り出し予定日を記載" %>
+  <%= f.text_field :result, placeholder:"初投稿時は割り出し予定日を記載" %>
 
   <div>
-  備考欄(編集可)
+  備考欄
 　</div>
-  <%= f.text_area :note , placeholder:"例1）マットの水分量：やや多め...例２）温度設定：25度など"%>
+  <%= f.text_area :note, placeholder:"例1）マットの水分量：やや多め...例２）温度設定：25度など"%>
 
   <div>
   <%= f.submit "投稿する"%>
