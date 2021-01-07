@@ -8,11 +8,11 @@ class InformationsController < ApplicationController
   end
 
   def create
-    @information = Information.new(information.params)
-    if @information,save
+    @information = Information.new(information_params)
+    if @information.save
       redirect_to root_path
     else
-      render new
+      render :new
     end
   end
 
