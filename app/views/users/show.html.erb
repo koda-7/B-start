@@ -1,0 +1,9 @@
+<% @breeds.each do |breed| %>
+
+  <%= breed.title %>
+
+  <%= breed.date %>
+
+  <%= image_tag breed.image, class: "breed-img"  %>
+      
+<% end %>
