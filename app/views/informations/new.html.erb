@@ -1,0 +1,31 @@
+<%= form_with(model: @information , local: true) do |f|%>
+
+  <div>
+  タイトル
+  </div>
+  <%= f.text_field :breedname %>
+
+  <div>
+  産地
+  </div>
+  <%= f.text_field :locality %>
+
+  <div>
+  累代
+  </div>
+  <%= f.collection_select(:generation_id, Category.all, :id, :name, {}, {class:"select-box", id:"generation"}) %>
+
+  <div>
+  エサ
+  </div>
+  <%= f.collection_select(:food_id, Category.all, :id, :name, {}, {class:"select-box", id:"food"}) %>
+
+  <div>
+  メモ
+  </div>
+  <%= f.text_area :type_name %>
+
+  <div>
+  <%= f.submit "入力する"%>
+  </div>
+<% end %>
