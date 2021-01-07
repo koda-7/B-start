@@ -1,0 +1,38 @@
+<div>
+<%= @breed.title %>
+</div>
+
+<div>
+<%= link_to '編集', '#'%>
+<%= link_to '削除', '＃', class:'btn btn-dark' %>
+<%= link_to '幼虫飼育情報', new_information_path %> 
+</div>
+
+<div>
+<%= image_tag @breed.image,class:"item-box-img" %>
+</div>
+
+<div>
+カテゴリー
+<%= @breed.category.name%>
+</div>
+
+<div>
+種類
+<%= @breed.type_name %>
+</div>
+
+<div>
+セット日
+<%= @breed.date %>
+</div>
+
+<div>
+結果
+<%= @breed.result %>
+</div>
+
+<div>
+備考欄
+<%= @breed.note %>
+</div>

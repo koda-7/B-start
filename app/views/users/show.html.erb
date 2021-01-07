@@ -1,9 +1,11 @@
 <% @breeds.each do |breed| %>
-
+  <%= link_to breed_path(breed.id) do %>
+  <div>
   <%= breed.title %>
 
   <%= breed.date %>
-
+  </div>
   <%= image_tag breed.image, class: "breed-img"  %>
-      
+
+  <% end %>
 <% end %>
