@@ -7,6 +7,6 @@ class Generation < ActiveHash::Base
     { id: 13, name: 'CBF1' },{ id: 14, name: 'CBF2' },{ id: 15, name: 'CBF3' },
     { id: 16, name: 'CBF4' },{ id: 17, name: 'CBF5' },{ id: 18, name: 'CBF6' },
     { id: 19, name: 'CBF7' },{ id: 20, name: 'CBF8' },{ id: 21, name: 'CBF9' },
-    { id: 22, name: 'CBF10' },{ id: 21, name: 'CB' }
+    { id: 22, name: 'CBF10' },{ id: 23, name: 'CB' }
   ]
 end
