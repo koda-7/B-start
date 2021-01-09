@@ -13,5 +13,4 @@ class User < ApplicationRecord
   end
 
   has_many :breeds
-  has_many :informations
 end
