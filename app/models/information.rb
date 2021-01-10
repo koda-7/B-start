@@ -1,5 +1,6 @@
 class Information < ApplicationRecord
   belongs_to :breed
+  has_many :more_informations
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :generation
