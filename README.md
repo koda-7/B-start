@@ -20,12 +20,12 @@
 | date                         | date         | null: false |
 | result                       | string       |             |
 | text                         | text         |             |
-| user_id                      | reference    | foreign_key: true |
+| user                         | reference    | foreign_key: true |
 ### Association 
 - belongs_to :users
-- has_one:informations
+- has_one:information
 
-## informations テーブル
+## information テーブル
 | Column             | Type       | Options     |
 | ------------------ | ---------- | ------------|
 | breeding_name      | string     | null: false |
@@ -33,31 +33,34 @@
 | generation_id      | integer    | null: false |
 | food_id            | integer    | null: false |
 | memo               | text       |             |
-| breeds_id          | reference  | foreign_key: true |
+| breed              | reference  | foreign_key: true |
 ### Association
 - belongs_to :breeds
-- has_many :more-informations
+- has_many :more_informations
 
-## more-informations テーブル
+## more_information テーブル
 | Column             | Type       | Options     |
 | ------------------ | ---------- | ------------|
-| size               | string     |             |
+| number             | integer    | null;false  |
+| size               | integer    |             |
 | sex_id             | integer    |             |
 | birth_day          | date       |             |
-| memo               | text       |             |
-| informations_id    | reference  | foreign_key: true |
-### Association
-- belongs_to :informations
-- has_many :detail-informations
+| memos              | text       |             |
+| information        | reference  | foreign_key: true |
 
-## detail-informations テーブル
+### Association
+- belongs_to :information
+- has_many :detail_informations
+
+## detail_information テーブル
 | Column               | Type       | Options     |
 | -------------------- | ---------- | ------------| 
 | exchange_date        | date       | null: false |
 | capacity             | string     | null: false |
-| weight               | integer    |             |
-| more-informatinos_id | reference  | foreign_key: true |
+| weight               | integer    |
+| notes                | string     |
+| more-information     | reference  | foreign_key: true |
 ### Association
-- belongs_to :more-informations
+- belongs_to :more_information
 
 ## 画像をアップロードする際はActive Storage Gemを用いる。

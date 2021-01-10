@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2021-01-10T05:27:42.394Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="z1Ks-qBxWuTmW_o57YEA" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2021-01-10T07:33:04.814Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="uzGIlJVZLHV5bHnhpPxE" version="13.10.0" type="embed">
     <diagram id="FAHi92vayNuAMaZJ51Va" name="Page-1">
         <mxGraphModel dx="1137" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
             <root>
@@ -37,17 +37,17 @@
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="83" value="informations" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
+                <mxCell id="83" value="information" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="920" y="240" width="330" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="84" value="breedname：タイトル             string        null:false&#10;locality：産地                           string        null:false&#10;generation_id：累代（世代）  integer      null:false&#10;food_id：エサ                           integer      null:false&#10;memo：メモ２(複数行）　　   text&#10;&#10;more-informations_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=5" parent="83" vertex="1">
+                <mxCell id="84" value="breedname：タイトル             string        null:false&#10;locality：産地                           string        null:false&#10;generation_id：累代（世代）  integer      null:false&#10;food_id：エサ                           integer      null:false&#10;memo：メモ２(複数行）　　   text&#10;&#10;more-information_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=5" parent="83" vertex="1">
                     <mxGeometry y="30" width="330" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="85" value="more-informations" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="920" y="520" width="240" height="140" as="geometry"/>
+                <mxCell id="85" value="more-information" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="520" width="290" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="86" value="saize：サイズ           　　　 string&#10;sex_id：性別            　　　 integer&#10;birthday：羽化日      　　　date&#10;memos：メモ３(複数行）    text&#10;&#10;&#10;detail-informations_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=5" parent="85" vertex="1">
-                    <mxGeometry y="30" width="240" height="110" as="geometry"/>
+                <mxCell id="86" value="number:番号　　　　　　 integer    null:false&#10;size：サイズ           　　　 string&#10;sex_id：性別            　　　 integer&#10;birthday：羽化日      　　　date&#10;memos：メモ３(複数行）    text&#10;&#10;detail-information_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=5" parent="85" vertex="1">
+                    <mxGeometry y="30" width="290" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="87" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;entryX=0.008;entryY=0.446;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;startFill=0;endFill=0;exitX=1.001;exitY=0.412;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="79" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
@@ -55,19 +55,19 @@
                         <mxPoint x="921.6800000000003" y="315.67999999999984" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="88" value="" style="fontSize=12;html=1;endArrow=ERmany;startArrow=ERmandOne;strokeWidth=2;startFill=0;endFill=0;targetPerimeterSpacing=0;" parent="1" target="85" edge="1">
+                <mxCell id="88" value="" style="fontSize=12;html=1;endArrow=ERmany;startArrow=ERmandOne;strokeWidth=2;startFill=0;endFill=0;targetPerimeterSpacing=0;entryX=0.414;entryY=-0.014;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="85" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="1039.9999999999995" y="390" as="sourcePoint"/>
+                        <mxPoint x="1040" y="390" as="sourcePoint"/>
                         <mxPoint x="1040" y="510" as="targetPoint"/>
                         <Array as="points">
                             <mxPoint x="1040" y="440"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="89" value="detail-informations" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
+                <mxCell id="89" value="detail-information" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="360" y="535" width="360" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="90" value="exchange_date：投入/交換日       date          null:false&#10;capacity：容量            　 　　       string        null:false&#10;weight：体重                                  integer&#10;memos：メモ４(単数行　　　      string " style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=5" parent="89" vertex="1">
+                <mxCell id="90" value="exchange_date：投入/交換日       date          null:false&#10;capacity：容量            　 　　       string        null:false&#10;weight：体重                                  integer&#10;notes：メモ４(単数行　　　      string " style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=5" parent="89" vertex="1">
                     <mxGeometry y="30" width="360" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="91" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmany;entryX=0.008;entryY=0.446;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;startFill=0;endFill=0;" parent="1" edge="1">
