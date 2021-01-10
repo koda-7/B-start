@@ -19,6 +19,7 @@ class InformationsController < ApplicationController
 
   def show
     @information = Information.find(params[:id])
+    @breed = Breed.find(params[:id])
   end
 
   private
