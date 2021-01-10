@@ -1,7 +1,7 @@
 class InformationsController < ApplicationController
 
   def index
-
+    
   end
 
   def new
@@ -9,14 +9,16 @@ class InformationsController < ApplicationController
   end
   
   def create
-    # binding.pry
-    # @breed = Breed.find(params[:breed_id])
     @information = Information.new(information_params)
     if @information.save
       redirect_to root_path
     else
       render :new
     end
+  end
+
+  def show
+    @information = Information.find(params[:id])
   end
 
   private
