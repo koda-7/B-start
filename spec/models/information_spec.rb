@@ -1,5 +1,5 @@
 require 'rails_helper'
-describe Breed, type: :model do
+describe Information, type: :model do
   before do
     @information = FactoryBot.build(:information)
   end
