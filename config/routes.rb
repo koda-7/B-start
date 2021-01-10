@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :breeds, only: [:index, :new, :create, :show] do
     resources :informations, only: [:index, :new, :create, :show] do
-      resources :more_informations, only: [:new, :create]
+      resources :more_informations, only: [:new, :create, :show]
     end
   end
 end

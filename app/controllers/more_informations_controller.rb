@@ -15,6 +15,12 @@ class MoreInformationsController < ApplicationController
     end
   end
 
+  def show
+    @more_information = MoreInformation.find(params[:id])
+    @information = Information.find(params[:id])
+    @breed = Breed.find(params[:id])
+  end
+
   private
 
   def more_inf_params
