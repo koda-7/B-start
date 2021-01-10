@@ -1,0 +1,31 @@
+<%= form_with(model: @more_information, url:breed_information_more_informations_path, local: true) do |f|%>
+
+  <div>
+  番号
+  </div>
+  <%= f.text_field :number %>
+
+  <div>
+  サイズ
+  </div>
+  <%= f.text_field :size %>
+
+  <div>
+  性別
+  </div>
+  <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"sex"}) %>
+
+  <div>
+  羽化日
+  </div>
+  <%= f.text_field :birthday, placeholder:"例）2021-1-1" %>
+
+  <div>
+  メモ
+  </div>
+  <%= f.text_area :memos %>
+
+  <div>
+  <%= f.submit "入力する"%>
+  </div>
+<% end %>

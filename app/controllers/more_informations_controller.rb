@@ -1,15 +1,17 @@
 class MoreInformationsController < ApplicationController
 
   def new
-    @more_information = More_information.new
+    # @breed = Breed.find(params[:breed_id])
+    @more_information = MoreInformation.new
   end
 
   def create
-    @more_information = More_information.new(more_inf_params)
+    # binding.pry
+    @more_information = MoreInformation.new(more_inf_params)
     if @more_information.save
       redirect_to root_path
     else
-      render new
+      render :new
     end
   end
 
