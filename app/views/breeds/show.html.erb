@@ -5,7 +5,8 @@
 <div>
 <%= link_to '編集', '#' %>
 <%= link_to '削除', '#' %>
-<%= link_to '幼虫飼育情報', new_breed_information_path(@breed.id) %> 
+<%= link_to '幼虫飼育情報入力', new_breed_information_path(@breed.id) %> 
+<%= link_to '幼虫飼育情報詳細', breed_information_path(@breed.information.id) %>
 </div>
 
 <div>
