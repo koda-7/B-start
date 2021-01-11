@@ -2,6 +2,7 @@ class MoreInformationsController < ApplicationController
 
   def new
     # @breed = Breed.find(params[:breed_id])
+    # @information = Information.find(params[:information_id])
     @more_information = MoreInformation.new
   end
 
@@ -13,6 +14,12 @@ class MoreInformationsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @breed = Breed.find(params[:id])
+    @information = Information.find(params[:breed_id])
+    @more_information = MoreInformation.find(params[:information_id])
   end
 
   private

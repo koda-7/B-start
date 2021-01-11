@@ -1,8 +1,37 @@
 <%# 幼虫情報がまだ未記入の場合に表示する %>
-<%= link_to '個別管理情報入力画面へ', new_breed_information_more_information_path(@breed.id, @information.id) %>
+<%= link_to '個別管理情報の入力画面へ', new_breed_information_more_information_path(@breed.id, @information.id) %>
+
+<%# breed_information_more_information GET    /breeds/:breed_id/informations/:information_id/more_informations/:id(.:format)           more_informations#show %>
+
+
 <%# 幼虫飼育情報の共通項目 %>
+<div>
 <%= @information.breedname %>
+</div>
+
+<div>
 <%= @information.locality %>
+</div>
+
+<div>
 <%= @information.generation.name %>
+</div>
+
+<div>
 <%= @information.food.name %>
+</div>
+
+<div>
 <%= @information.memo %>
+</div>
+
+<%# ここから幼虫個別管理情報 %>
+<%# 幼虫の個別管理の番号のみを一覧表示させる %>
+<div>
+ここから↓幼虫の個別管理情報
+</div>
+<div>
+<%= @more_information.number %>
+<%= @more_information.memos %>
+</div>
+<%= link_to '個別管理情報の詳細画面へ', breed_information_more_information_path(@breed.information.id, @more_information.id) %>

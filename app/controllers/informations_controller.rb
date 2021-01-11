@@ -6,6 +6,9 @@ class InformationsController < ApplicationController
 
   def new
     @information = Information.new
+    # @information = Information.find(params[:information_id])
+    # @more_information = MoreInformation.find(params[:more_information_id])
+
   end
   
   def create
@@ -18,8 +21,9 @@ class InformationsController < ApplicationController
   end
 
   def show
-    @information = Information.find(params[:id])
     @breed = Breed.find(params[:id])
+    @information = Information.find(params[:breed_id])
+    @more_information = MoreInformation.find(params[:breed_id],params[:information_id])
   end
 
   private
