@@ -1,5 +1,5 @@
 <%# 幼虫情報がまだ未記入の場合に表示する %>
-<%= link_to '個別管理情報の入力画面へ', new_breed_information_more_information_path(@breed.id, @information.id) %>
+<%# <%= link_to '個別管理情報の入力画面へ', new_breed_information_more_information_path(@breed.id,@information.id) %> %>
 
 <%# breed_information_more_information GET    /breeds/:breed_id/informations/:information_id/more_informations/:id(.:format)           more_informations#show %>
 
@@ -31,7 +31,7 @@
 ここから↓幼虫の個別管理情報
 </div>
 <div>
-<%= @more_information.number %>
-<%= @more_information.memos %>
-</div>
-<%= link_to '個別管理情報の詳細画面へ', breed_information_more_information_path(@breed.information.id, @more_information.id) %>
+<%# <%= @more_information.number %> %>
+<%# <%= @more_information.memos %> %>
+</div> 
+<%# <%= link_to '個別管理情報の詳細画面へ', breed_information_more_information_path(@breed.id, @information.id, @more_information.id) %> %>
