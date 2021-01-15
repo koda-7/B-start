@@ -8,7 +8,6 @@ class BreedsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @breed = Breed.new(breed_params)
     if @breed.save
       redirect_to root_path
