@@ -1,3 +1,37 @@
-<h1>Breeds#index</h1>
-  
-<p>Find me in app/views/breeds/index.html.erb</p>
+<%# アニメーション %>
+<main>
+  <div class="main-images align-top mt-4">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 class="text-center">答えはひとつだけじゃない。</h2>
+          <img src="/images/main1.png" class="top-img" >
+        </div>
+        <div class="carousel-item">
+          <h2 class="text-center">やりたいことを、本気でやろう。</h2>
+          <img src="/images/main2.png" class="top-img" >
+        </div>
+        <div class="carousel-item">
+          <h2 class="text-center">すき だから、あきらめない。。</h2>
+          <img src="/images/main3.png" class="top-img" >
+        </div>
+        <div class="carousel-item">
+           <h2 class="text-center">いつまでも少年。。</h2>
+          <img src="/images/main4.png" class="top-img" >
+        </div>
+      </div>
+    </div>              
+  </div>
+<%# このサイトの目的 %>
+  <div class = "text-center mt-2">
+    <p>ようこそ  B-Startへ</p>
+    <p>ここはあなたのブリード飼育情報を一括管理できる場所です</p>
+    <p>仲間と一緒にブリードを楽しみましょう</p>
+  </div>
+</main>
