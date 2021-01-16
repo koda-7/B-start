@@ -1,20 +1,30 @@
-<h2>ログイン</h2>
-
 <%= form_with model:@user, url: user_session_path, local: true do |f| %>
-   <%= render "devise/shared/error_messages", resource: resource %> 
-
-  <div class="field">
-    メールアドレス
-    <%= f.email_field :email, autofocus: true %>
+  
+  <div class='form-wrap'>
+  <div class='form-header'>
+    <h2 class='form-header-text'>
+      ログイン画面
+    </h2>
   </div>
 
-  <div class="field">
-    パスワード
-    <%= f.password_field :password %>
+  <%= render "devise/shared/error_messages", resource: resource %> 
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+    </div>
+    <%= f.email_field :email, autofocus: true, class:"input-default" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "ログイン" %>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+    </div>
+    <%= f.password_field :password, autofocus: true, class:"input-default" %>
+  </div>
+
+  <div class='form-btn'>
+    <%= f.submit "活動開始" ,class:"text-center register-btn" %>
   </div>
 <% end %>
 

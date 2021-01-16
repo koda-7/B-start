@@ -1,3 +1,4 @@
+/* 入力フォーム画面 */
 .registration-main {
   width: 100%;
   min-width: 800px;
@@ -58,7 +59,7 @@
   margin-top: 3px;
 }
 
-/* 入力フォームのボタンに使用 */
+/* 入力フォームのボタン */
 .form-btn {
   width: 30%;
   margin: 0 auto;
