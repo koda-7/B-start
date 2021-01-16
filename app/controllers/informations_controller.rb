@@ -2,9 +2,12 @@ class InformationsController < ApplicationController
 
 
   def new
-    @information = Information.new
+    # binding.pry
+    @breed = Breed.find(params[:breed_id])
+    @information = @breed.build_information
+    # @information = Information.new
   end
-  
+
   def create
     @information = Information.new(information_params)
     if @information.save
@@ -15,7 +18,6 @@ class InformationsController < ApplicationController
   end
 
   def show
-    @breed = Breed.find(params[:id])
     @information = Information.find(params[:breed_id])
   end
 
