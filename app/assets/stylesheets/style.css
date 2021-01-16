@@ -1,9 +1,10 @@
-.breed-img {
-  width: 30vh;
-  height: 30vh;
-}
+/* 共通 */
 
-.top-img{
-  display: block;
-  margin:0 auto; 
+/* 各入力フォームの必須表現に使用 */
+.indispensable {
+  background: #68310486;
+  margin-left: 8px;
+  padding: 3px;
+  color: #fff;
+  font-size: 12px;
 }
