@@ -1,40 +1,70 @@
 <%= form_with(model: @breed , local: true) do |f|%>
-  <div>
-  投稿画像
-  </div>
-  <%= f.file_field :image %>
 
-  <div>
-  題名
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h2 class='form-header-text'>
+      新規投稿（産卵セット情報）入力画面
+    </h2>
   </div>
-  <%= f.text_field :title %>
 
-  <div>
-  カテゴリー
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">投稿画像</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.file_field :image, class:"input-default" %>
   </div>
-  <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"category"}) %>
 
-  <div>
-  種類名
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">タイトル</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :title, class:"input-default", placeholder:"例) 初めての産卵セット" %>
   </div>
-  <%= f.text_field :type_name, placeholder:"例）オオクワガタ"%>
 
-  <div>
-  セット日
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">カテゴリー</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box ", id:"category"}) %>
   </div>
-  <%= f.text_field :date, placeholder:"例）2021-1-1"%>
 
-  <div>
-  結果
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">タイトル</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :type_name, class:"input-default", placeholder:"例) オオクワガタ" %>
   </div>
-  <%= f.text_field :result, placeholder:"初投稿時は割り出し予定日を記載" %>
-
-  <div>
-  備考欄
-　</div>
-  <%= f.text_area :note, placeholder:"例1）マットの水分量：やや多め...例２）温度設定：25度など"%>
-
-  <div>
-  <%= f.submit "投稿する"%>
+  
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">作成日（セット日）</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :date, class:"input-default", placeholder:"例) 2021-1-1" %>
   </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">結果</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :result, class:"input-default", placeholder:"例) 初投稿時は割り出し予定日を記載" %>
+  </div>
+
+   <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">備考欄</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :note, class:"input-default", placeholder:"例1）マットの水分量：やや多め...例２）温度設定：25度など" %>
+  </div>
+  
+  <div class='form-btn'>
+    <%= f.submit "入力する" ,class:"text-center register-btn" %>
+  </div>
+</div>
 <% end %>
