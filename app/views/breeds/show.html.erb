@@ -1,39 +1,44 @@
-<div>
-<%= @breed.title %>
+<div class ="breed-user">
+  <div class ="breed-item">
+    <%= link_to '幼虫飼育情報入力', new_breed_information_path(@breed.id),class: :"breed_link" %> 
+    <%# <%= link_to '幼虫飼育情報詳細', breed_information_path(@breed.information.id) %> 
+    <%= link_to '編集', '#' , class: :"breed_link ml-3 " %>
+    <%= link_to '削除', '#' , class: :"breed_link ml-3" %>
+  </div>
 </div>
 
-<div>
-<%= link_to '編集', '#' %>
-<%= link_to '削除', '#' %>
-<%= link_to '幼虫飼育情報入力', new_breed_information_path(@breed.id) %> 
-<%# <%= link_to '幼虫飼育情報詳細', breed_information_path(@breed.information.id) %> 
-</div>
+<div class="breed-show">
+  <div class="breed-box">
+    <h2 class="name">
+      <%= @breed.title %>
+    </h2>
+    <div class='breed-img-content'>
+      <%= image_tag @breed.image ,class:"breed-box-img" %>
+    </div>
+  </div>
 
-<div>
-<%= image_tag @breed.image,class:"breed-img" %>
-</div>
-
-<div>
-カテゴリー
-<%= @breed.category.name%>
-</div>
-
-<div>
-種類
-<%= @breed.type_name %>
-</div>
-
-<div>
-セット日
-<%= @breed.date %>
-</div>
-
-<div>
-結果
-<%= @breed.result %>
-</div>
-
-<div>
-備考欄
-<%= @breed.note %>
+  <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-breed">投稿者</th>
+        <td class="detail-value"><%= @breed.user.nickname %></td>
+      </tr>
+      <tr>
+        <th class="detail-breed">カテゴリー</th>
+        <td class="detail-value"><%= @breed.category.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-breed">セット日</th>
+        <td class="detail-value"><%= @breed.date %></td>
+      </tr>
+      <tr>
+        <th class="detail-breed">結果</th>
+        <td class="detail-value"><%= @breed.result %></td>
+      </tr>
+      <tr>
+        <th class="detail-breed">備考欄</th>
+        <td class="detail-value"><%= @breed.note %></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
