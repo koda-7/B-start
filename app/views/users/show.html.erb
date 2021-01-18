@@ -1,11 +1,35 @@
-<% @breeds.each do |breed| %>
-  <%= link_to breed_path(breed.id) do %>
-  <div>
-  <%= breed.title %>
-
-  <%= breed.date %>
+<div class = "user-show">
+  <%# ユーザーのプロフィール %>
+  <div class = "profile">
+    <div class="card  text-center " style="width: 19rem;" style="height: 300px;">
+      <div class="card-body">
+        <h5 class="card-title font-weight-bold "><%= "#{@user.nickname}の  情報"%></h5>
+        <h6 class="card-title font-weight-bold mt-4">プロフィール</h6>
+        <h6 class="card-text text-wrap "><%= @user.profile %></h6>
+      </div>
+    </div>
   </div>
-  <%= image_tag breed.image, class: "breed-img"  %>
 
-  <% end %>
-<% end %>
+  <div class='breed-contents '>
+    <ul class='breed-lists '>
+      <%# ユーザーの投稿一覧 %>
+      <% @breeds.each do |breed| %>
+      <li class='list '>
+        <%= link_to breed_path(breed.id) do %>
+        <div class='breed-img-content '>
+          <%= image_tag breed.image, class: "breed-img rounded-circle"  %>
+        </div>
+        <div class='breed-info text-center'>
+          <h3 class='breed-title'>
+            <%= breed.title %>
+          </h3>
+          <div class='breed-date'>
+            <span><%= breed.date %></span>
+          </div>
+        </div>
+        <% end %>
+       <% end %>
+      </li> 
+    </ul>
+  </div>
+</div>
